@@ -1,0 +1,10 @@
+.formLogin{
+    width: 50%;
+    margin: auto;
+    align-contents: center;
+    margin-top: 100px
+}
+#log{
+    font-size: 25px;
+    color: white;
+}

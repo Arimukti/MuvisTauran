@@ -1,0 +1,100 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Andi",
+      "password": "12345",
+      "address": "Bandung",
+      "phoneNumber": "123456"
+    },
+    {
+      "id": 2,
+      "name": "Dani",
+      "password": "12345",
+      "address": "Jakarta",
+      "phoneNumber": "7654321"
+    },
+    {
+      "id": 3,
+      "name": "Dewi",
+      "password": "12345",
+      "address": "Surabaya",
+      "phoneNumber": "194756794"
+    },
+    {
+      "id": 4,
+      "name": "surya",
+      "password": "12345",
+      "address": "Semarang",
+      "phoneNumber": "9373536"
+    }
+  ],
+  "products": [
+    {
+      "id": 4,
+      "name": "Avocado Juice",
+      "imgUrl": "https://images.unsplash.com/photo-1604298331663-de303fbc7059?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80",
+      "price": 12000,
+      "CategoryId": 2
+    },
+    {
+      "id": 5,
+      "name": "Es teh manis",
+      "imgUrl": "https://images.unsplash.com/photo-1599767431130-41b1c51d9a7b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80",
+      "price": 7000,
+      "CategoryId": 2
+    },
+    {
+      "id": 6,
+      "name": "Ayam Goreng",
+      "imgUrl": "https://images.unsplash.com/photo-1647102398925-e23f6486ca04?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+      "price": 15000,
+      "CategoryId": 1
+    },
+    {
+      "id": 8,
+      "name": "Jus Mangga",
+      "imgUrl": "https://images.unsplash.com/photo-1546173159-315724a31696?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80",
+      "price": 12000,
+      "CategoryId": 2
+    },
+    {
+      "name": "Gethuk Goreng",
+      "price": 17000,
+      "imgUrl": "https://www.piknikdong.com/wp-content/uploads/2021/07/Getuk-Goreng-Sokaraja.jpg",
+      "CategoryId": "1",
+      "id": 9
+    },
+    {
+      "imgUrl": "https://img-global.cpcdn.com/recipes/62bc0149e02866d8/1200x630cq70/photo.jpg",
+      "name": "Bakso Sapi ",
+      "price": 17000,
+      "CategoryId": "1",
+      "id": 10
+    },
+    {
+      "name": "Coffee Milkshake",
+      "imgUrl": "https://bakingmischief.com/wp-content/uploads/2022/03/coffee-milkshake-square.jpg",
+      "price": 36000,
+      "CategoryId": "2",
+      "id": 11
+    },
+    {
+      "name": "Ayam Geprek",
+      "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGHS03dcE6f47X1mV6BZaHFSX14zCHmv999w&usqp=CAU",
+      "price": 15000,
+      "CategoryId": "1",
+      "id": 12
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "food"
+    },
+    {
+      "id": 2,
+      "name": "drink"
+    }
+  ]
+}

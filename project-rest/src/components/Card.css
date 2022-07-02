@@ -1,0 +1,14 @@
+.cardItem{
+    display: inline-block;
+    box-sizing: border-box;
+    margin-right: 12px;
+    width: 120px;
+    margin-top: 10px
+}
+Img{
+     width: 100px;
+    height: 150px;
+}
+p{
+    color: blue;
+}
