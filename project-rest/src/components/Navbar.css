@@ -1,3 +1,26 @@
 .me-auto{
-    margin-right:50px
+    margin-right:50px;
+    height: 20px;
+    align-items: center;
+    display: flex;
+    
+}
+.nav-text:hover{
+    color: blue;
+}
+.container{
+    display: flex;
+    height: 20px;
+}
+#brand-img img{
+    height: 30px;
+    width: 40px;
+}
+.nav-left{
+    height: 20px;
+}
+.sticky-top{
+    display: flex;
+    justify-content: space-between;
+
 }

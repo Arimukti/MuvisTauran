@@ -1,0 +1,46 @@
+.btn-submit{
+    background-color: blue;
+    margin: auto;
+    border-radius: 10px;
+    width: 80px;
+    height: 30px;
+    color: white;
+    align-items: center;
+    transition-duration: 0.6s;
+}
+.btn-submit:hover{
+    background-color: green;
+    color: black;
+}
+.addProduct{
+    display: inline;
+    width: 80%;
+    margin: auto;
+}
+h1{
+    color: white;
+    margin: auto;
+    margin-bottom: 35px;
+}
+input{
+    border-color: green;
+    background-color: wheat;
+    margin-bottom: 10px;
+}
+select{
+    border-color: green;
+    background-color: wheat;
+    margin-bottom: 10px;
+}
+input:hover{
+    background-color: white;
+}
+select:hover{
+    background-color: white;
+}
+.form-add{
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    margin: auto;
+}

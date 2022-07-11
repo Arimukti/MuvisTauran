@@ -7,7 +7,10 @@ import { useEffect, useState } from "react";
 import formatCurrency from "../components/Helper";
 
 function Detail() {
+    const { updateProductResult } = useSelector((state) => state.ProductReducer);
+    // updateProductResult = false;
     const [dataDetail, setDataDetail] = useState([]);
+    // const [deleted, setDeleted] = useState(false);
     const params = useParams();
     const navigate = useNavigate();
     useEffect(() => {
@@ -17,6 +20,7 @@ function Detail() {
     }, []);
 
     function formatCurrency(num) {
+        console.log(num);
         return num.toLocaleString("id-ID", { style: "currency", currency: "IDR" });
     }
 
@@ -30,9 +34,16 @@ function Detail() {
         })
             .then(response => response.json())
             .then(res => navigate('/product'))
+            // .then(res => setDeleted(true))
             .catch(err => console.log(err));
     };
 
+    // useEffect(() => {
+    //     return () => {
+    //         console.log('Success delete');
+    //         navigate('/product');
+    //     };
+    // }, []);
     const editHandler = (id) => {
         navigate('/edit/' + id);
     };
@@ -45,7 +56,7 @@ function Detail() {
                 <Card.Body>
                     <Card.Title>{dataDetail.name}</Card.Title>
                     <Card.Text>
-                        {dataDetail.price}
+                        {dataDetail.price && formatCurrency(dataDetail.price)}
                     </Card.Text>
                     <Button variant="primary" onClick={() => editHandler(dataDetail.id)}>Edit</Button>
                     <Button variant="danger" onClick={() => deleteHandler(dataDetail.id)}>Delete</Button>

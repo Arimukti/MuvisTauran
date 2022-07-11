@@ -6,13 +6,8 @@ import "./EditProduct.css";
 import { useNavigate } from "react-router-dom";
 
 function EditDetail() {
-    // const [edit, setEdit] = useState({
-    //     name: "",
-    //     imgUrl: "",
-    //     price: "",
-    //     CategoryId: ""
-    // });
     const [dataBefore, setData] = useState([]);
+    const [isUpdate, setUpdate] = useState(false);
     const navigate = useNavigate();
     const params = useParams();
     useEffect(() => {
@@ -30,8 +25,14 @@ function EditDetail() {
             body: JSON.stringify(dataBefore)
         })
             .then(response => response.json())
-            .then(data => navigate("/product"));
+            .then(data => setUpdate(true));
     };
+    useEffect(() => {
+        if (isUpdate) {
+            alert('data berhasil di update');
+            navigate('/product');
+        }
+    }, [isUpdate]);
     return (
         <Form>
             <p>Edit Product</p>

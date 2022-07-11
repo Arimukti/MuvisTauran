@@ -1,0 +1,22 @@
+.btn-delete{
+    background-color: red;
+    margin-left: 10px;
+    color: white;
+    height: 30px;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+}
+.btn-edit{
+    background-color: green;
+    margin-left: 10px;
+    color: white;
+    height: 30px;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+}
+h1{
+    color:white;
+    font-size: 40px;
+}

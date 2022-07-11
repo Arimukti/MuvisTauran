@@ -1,11 +1,15 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Form from 'react-bootstrap/Form';
 import { useNavigate } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 import "./Login.css";
+import { useDispatch, useSelector } from 'react-redux';
+import { loginUser } from '../actions/productAction';
 
 
 function Login() {
+    const dispatch = useDispatch();
+    const { isLogin } = useSelector((state) => state.ProductReducer);
     const [login, setLogin] = useState({
         username: "",
         password: "",
@@ -14,24 +18,22 @@ function Login() {
 
     function loginHandler(event) {
         event.preventDefault();
-        if (login.username !== '' && login.password === "12345") {
-            navigate('/');
-        }
+        dispatch(loginUser({ username: login.username, password: login.password }));
+        navigate('/');
     }
+
 
     return (
         <div className='formLogin'>
             <p id="log">Login with your account</p>
-            <Form onClick={loginHandler} className="align-items-center">
+            <Form className="align-items-center">
                 <Form.Group className="mb-3" controlId="name">
-                    <Form.Label>Name</Form.Label>
                     <Form.Control className="text-center" type="text" value={login.username} placeholder="Type your name" onChange={(e) => setLogin((state) => ({ ...state, username: e.target.value }))} />
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="password">
-                    <Form.Label>Password</Form.Label>
                     <Form.Control className="text-center" type="password" value={login.password} placeholder="************" onChange={(e) => setLogin((state) => ({ ...state, password: e.target.value }))} />
                 </Form.Group>
-                <Button variant="primary" type='submit' >Login</Button>
+                <Button variant="primary" type='submit' className='btn-login' onClick={loginHandler}>Login</Button>
             </Form>
         </div>
     );

@@ -1,0 +1,43 @@
+body{
+    background-image:url('bckgrnd.jpg');
+    background-size: cover;
+    /* background-repeat: no-repeat; */
+}
+.up{
+    display: flex;
+}
+.img-ayam img{
+    width: 600px;
+    margin-left: 20px;
+    height: 500px;
+}
+p1{
+    font-size: 20px;
+}
+h1{
+   font-family: 'Gentium Book Plus', serif;
+   color: #F37878;
+}
+.btn-landing{
+    position: absolute;
+    left:250px;
+    top:300px;
+    padding: 20px;
+}
+.btn-left{
+    margin-right: 20px;
+    background-color: #FAD9A1;
+    border-radius: 10px;
+    color:blue
+}
+.btn-about{
+    margin-right: 20px;
+    background-color: #FAD9A1;
+    border-radius: 10px;
+    color:blue
+}
+.img-add{
+    position: absolute;
+    bottom: 5px;
+    margin-left: 100px;
+}

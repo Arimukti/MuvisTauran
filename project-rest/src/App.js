@@ -2,21 +2,28 @@ import './App.css';
 import Login from './pages/Login';
 import { Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
-import AddProduct from './pages/AddProduct';
+import AddProduct from './components/AddProduct/AddProduct';
 import NavbarList from './components/Navbar';
-import Detail from './pages/Detail';
-import EditDetail from './pages/EditProduct';
+import DetailProduct from './components/Detail/DetailProduct';
+import EditProduct from './components/EditProduct/EditProduct';
+import { ListProduct } from './components';
+import Landing from './components/Landing/Landing';
+import Protected from './components/Protected/Protected';
 
 function App() {
   return (
     <div className="App">
       <NavbarList />
       <Routes>
+        <Route path='/' element={<Landing />} />
         <Route path='/login' element={<Login />} />
-        <Route path='/product' element={<Home />} />
-        <Route path='/product/:id' element={<Detail />} />
-        <Route path='/add' element={<AddProduct />} />
-        <Route path='/edit/:id' element={<EditDetail />} />
+        <Route path='/product' element={<ListProduct />} />
+        <Route path='/product/:id' element={<DetailProduct />} />
+        <Route path='/add' element={
+          <Protected>
+            <AddProduct />
+          </Protected>} />
+        <Route path='/edit/:id' element={<EditProduct />} />
       </Routes>
     </div>
   );

@@ -1,10 +1,18 @@
 .formLogin{
-    width: 50%;
+    width: 25%;
     margin: auto;
-    align-contents: center;
     margin-top: 100px
 }
 #log{
     font-size: 25px;
     color: white;
+}
+.mb-3>Form.Control:hover{
+background-color: wheat;
+border-color: black;
+}
+.btn-login:hover{
+    background-color: green;
+    color:black;
+    transition-duration: 0.3s;
 }
