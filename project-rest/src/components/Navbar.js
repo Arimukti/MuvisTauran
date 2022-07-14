@@ -5,7 +5,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import { useDispatch, useSelector } from 'react-redux';
 import { NavLink, useNavigate } from "react-router-dom";
 import { Link } from 'react-router-dom';
-import { getListProduct, logoutUser } from '../actions/productAction';
+import { getListProduct, logoutUser } from '../store/actions/productAction';
 import Home from '../pages/Home';
 import './Navbar.css';
 import muvis from './brand-muvis.png';

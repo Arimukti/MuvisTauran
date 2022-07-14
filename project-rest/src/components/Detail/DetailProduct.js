@@ -5,7 +5,7 @@ import Card from 'react-bootstrap/Card';
 import "./DetailProduct.css";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from 'react-redux';
-import { deleteProduct, getListProduct, detailProduct, getProductById } from "../../actions/productAction";
+import { deleteProduct, getListProduct, detailProduct, getProductById } from "../../store/actions/productAction";
 
 function DetailProduct() {
     const { getListProductResult, getListProductLoading, getListProductError, deleteProductResult, getProductByIdResult } = useSelector((state) => state.ProductReducer);

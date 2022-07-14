@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import { updateProduct, detailProduct, getListProduct } from '../../actions/productAction';
+import { updateProduct, detailProduct, getListProduct } from '../../store/actions/productAction';
 
 
 function EditProduct() {

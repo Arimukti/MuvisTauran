@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import "./AddProduct.css";
 import { useDispatch, useSelector } from 'react-redux';
-import { addProduct, getListProduct, updateProduct } from '../../actions/productAction';
+import { addProduct, getListProduct, updateProduct } from '../../store/actions/productAction';
 import { useNavigate } from 'react-router-dom';
 
 function AddProduct() {

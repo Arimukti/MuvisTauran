@@ -1,0 +1,58 @@
+[
+  {
+    "name": "Es teh manis",
+    "imgUrl": "https://images.unsplash.com/photo-1599767431130-41b1c51d9a7b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80",
+    "price": 7000,
+    "description": "Es dengan gula alami dan teh pilihan, membuatnya harum dan menyegarkan",
+    "CategoryId": 2
+  },
+  {
+    "name": "Ayam Goreng",
+    "imgUrl": "https://images.unsplash.com/photo-1647102398925-e23f6486ca04?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+    "price": 15000,
+    "description": "Ayam goreng tersedia dalam berbagai pilihan: dada, paha, sayap",
+    "CategoryId": 1
+  },
+  {
+    "name": "Jus Mangga",
+    "imgUrl": "https://images.unsplash.com/photo-1546173159-315724a31696?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80",
+    "price": 12000,
+    "description": "Jus dengan buah mangga asli, nikmati kesegaran dan manfaatnya",
+    "CategoryId": 2
+  },
+  {
+    "name": "Gethuk Goreng",
+    "price": 17000,
+    "imgUrl": "https://www.piknikdong.com/wp-content/uploads/2021/07/Getuk-Goreng-Sokaraja.jpg",
+    "description": "Gethuk goreng asli sokaraja",
+    "CategoryId": 1
+  },
+  {
+    "imgUrl": "https://img-global.cpcdn.com/recipes/62bc0149e02866d8/1200x630cq70/photo.jpg",
+    "name": "Bakso Sapi ",
+    "price": 17000,
+    "description": "Bakso dengan daging sapi pilihan",
+    "CategoryId": 1
+  },
+  {
+    "name": "Coffee Milkshake",
+    "imgUrl": "https://bakingmischief.com/wp-content/uploads/2022/03/coffee-milkshake-square.jpg",
+    "price": 20000,
+    "description": "Nikmati kopi dengan cara yang berbeda. Nikmat, segar dan bikin melek",
+    "CategoryId": 2
+  },
+  {
+    "name": "Ayam Geprek",
+    "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGHS03dcE6f47X1mV6BZaHFSX14zCHmv999w&usqp=CAU",
+    "price": 15000,
+    "description": "Ayam geprek dengan daging ayam segar",
+    "CategoryId": 1
+  },
+  {
+    "name": "Nasi Goreng Sapi ",
+    "imgUrl": "https://img.kurio.network/ewrCJ9eRNpljU-80vrqWDQkN7o4=/1200x675/filters:quality(80)/https://kurio-img.kurioapps.com/20/10/10/a7e9eaa0-1c22-42b0-a11f-0a5ad1d30126.jpeg",
+    "price": 13000,
+    "description": "Nasi goreng dengan campuran daging sapi, lebih nikmat",
+    "CategoryId": 1
+  }
+]

@@ -5,11 +5,11 @@ const hash = (password) => {
     return bcrypt.hashSync(password, 10);
 };
 
-const compare = (hashed, password) => {
+const comp = (hashed, password) => {
     return bcrypt.compareSync(hashed, password);
 };
 
 
 module.exports = {
-    hash, compare
+    hash, comp
 };

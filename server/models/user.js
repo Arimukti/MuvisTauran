@@ -20,7 +20,7 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
-        isNull: {
+        notNull: {
           msg: "Name is required"
         },
         notEmpty: {
@@ -32,11 +32,11 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
-        isNull: {
-          msg: "Name is required"
+        notNull: {
+          msg: "Email is required"
         },
         notEmpty: {
-          msg: "Name is required"
+          msg: "Email is required"
         },
         isEmail: {
           msg: "Email not valid"
@@ -47,7 +47,7 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
-        isNull: {
+        notNull: {
           msg: "Password is required"
         },
         notEmpty: {
@@ -59,7 +59,7 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
-        isNull: {
+        notNull: {
           msg: "Address is required"
         },
         notEmpty: {
@@ -71,7 +71,7 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
-        isNull: {
+        notNull: {
           msg: "Phone number is required"
         },
         notEmpty: {
@@ -86,4 +86,5 @@ module.exports = (sequelize, DataTypes) => {
   User.beforeCreate((instance, option) => {
     instance.password = hash(instance.password);
   });
+  return User;
 };

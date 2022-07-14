@@ -1,0 +1,30 @@
+[
+  {
+    "name": "Andi",
+    "email": "andi98@mail.com",
+    "password": "12345",
+    "address": "Bandung",
+    "phoneNumber": "123456"
+  },
+  {
+    "name": "Dani",
+    "email": "dani123@mail.com",
+    "password": "12345",
+    "address": "Jakarta",
+    "phoneNumber": "7654321"
+  },
+  {
+    "name": "Dewi",
+    "email": "dewi65@mail.com",
+    "password": "12345",
+    "address": "Surabaya",
+    "phoneNumber": "194756794"
+  },
+  {
+    "name": "Surya",
+    "email": "suryamala5@mail.com",
+    "password": "12345",
+    "address": "Semarang",
+    "phoneNumber": "9373536"
+  }
+]

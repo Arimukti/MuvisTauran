@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import CardProduct from '../CardProduct/CardProduct';
-import { deleteProduct, getListProduct, detailProduct } from '../../actions/productAction';
+import { deleteProduct, getListProduct, detailProduct } from '../../store/actions/productAction';
 import "./ListProduct.css";
 import { useNavigate } from 'react-router-dom';
 import SweetAlert2 from 'react-sweetalert2';
