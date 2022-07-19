@@ -30,7 +30,7 @@ class UserController {
             const token = payloadToToken(sentPayload);
 
             res.status(200).json({
-                acces_token: token
+                access_token: token
             });
         } catch (err) {
             next(err);

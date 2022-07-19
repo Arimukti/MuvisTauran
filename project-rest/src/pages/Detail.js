@@ -25,6 +25,7 @@ function Detail() {
     }
 
     const deleteHandler = (id) => {
+        alert("ini di pages");
 
         fetch("http://localhost:3000/products/" + id, {
             method: "DELETE",

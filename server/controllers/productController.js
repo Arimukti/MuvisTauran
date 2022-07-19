@@ -84,7 +84,9 @@ class ProductController {
 
     static async editProduct(req, res, next) {
         try {
+            console.log("Masuk edit");
             const { id } = req.params;
+            console.log(id);
             let { name, price, imgUrl, description, CategoryId } = req.body;
 
             if (price) {
@@ -109,6 +111,7 @@ class ProductController {
                 message: "Success update product with id " + id
             });
         } catch (err) {
+            console.log(err);
             next(err);
         }
     }

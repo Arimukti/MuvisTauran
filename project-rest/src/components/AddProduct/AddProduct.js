@@ -8,18 +8,17 @@ function AddProduct() {
     const [name, setName] = useState('');
     const [imgUrl, setImgUrl] = useState('');
     const [price, setPrice] = useState('');
+    const [description, setDescription] = useState('');
     const [CategoryId, setCategoryId] = useState('');
-    //id untuk update
-    const [id, setId] = useState('');
     const { addProductResult, detailProductResult, updateProductResult } = useSelector((state) => state.ProductReducer);
     const dispatch = useDispatch();
     const navigate = useNavigate();
 
     const submitHandler = (event) => {
         event.preventDefault();
-        // alert("berfungsi");
-        dispatch(addProduct({ name: name, imgUrl: imgUrl, price: price, CategoryId: CategoryId }));
-        navigate('/product');
+        alert("berfungsi dengan baik untuk add product");
+        dispatch(addProduct({ name: name, imgUrl: imgUrl, price: price, description: description, CategoryId: CategoryId }));
+        // navigate('/product');
 
     };
 
@@ -29,6 +28,7 @@ function AddProduct() {
             setName('');
             setImgUrl('');
             setPrice('');
+            setDescription('');
             setCategoryId('');
         }
     }, [addProductResult, dispatch]);
@@ -39,7 +39,6 @@ function AddProduct() {
             setImgUrl(detailProductResult.imgUrl);
             setPrice(detailProductResult.price);
             setCategoryId(detailProductResult.CategoryId);
-            setId(detailProductResult.id);
         }
     }, [detailProductResult, dispatch]);
 
@@ -49,19 +48,21 @@ function AddProduct() {
             setName('');
             setImgUrl('');
             setPrice('');
+            setDescription('');
             setCategoryId('');
         }
     }, [updateProductResult, dispatch]);
 
     return (
         <div className='addProduct'>
-            <h1>{detailProductResult.id ? "Edit Product" : "Add Product"}</h1>
+            <h1>Add Product</h1>
             <form className='form-add' onSubmit={submitHandler}>
-                <input type="text" name="name" value={name} placeHolder="Name . . . ." onChange={(event) => setName(event.target.value)} />
-                <input type="text" name="imgUrl" value={imgUrl} placeHolder="Image Url . . ." onChange={(event) => setImgUrl(event.target.value)} />
-                <input type="text" name="price" value={price} placeHolder="Price . . ." onChange={(event) => setPrice(+event.target.value)} />
-                <select name="CategoryId" value={CategoryId} nChange={(event) => setCategoryId(event.target.value)}>
-                    <option selected disabled>Choose One</option>
+                <input type="text" name="name" placeHolder="Name . . . ." onChange={(event) => setName(event.target.value)} />
+                <input type="text" name="imgUrl" placeHolder="Image Url . . ." onChange={(event) => setImgUrl(event.target.value)} />
+                <input type="text" name="price" placeHolder="Price . . ." onChange={(event) => setPrice(+event.target.value)} />
+                <input type="text" name="description" placeHolder="Description . . ." onChange={(event) => setDescription(event.target.value)} />
+                <select name="CategoryId" value={CategoryId} onChange={(event) => setCategoryId(event.target.value)}>
+                    <option selected>Choose One</option>
                     <option value="1">Food</option>
                     <option value="2">Drink</option>
                 </select>

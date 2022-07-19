@@ -1,6 +1,6 @@
 import { LOGIN, LOGOUT, GET_LIST_PRODUCT, GET_PRODUCT_BY_ID, ADD_PRODUCT, DELETE_PRODUCT, DETAIL_PRODUCT, UPDATE_PRODUCT } from "../../actions/productAction";
 const initialState = {
-    isLogin: null,
+    isLogin: localStorage.getItem('token'),
 
     getListProductResult: false,
     getListProductLoading: false,

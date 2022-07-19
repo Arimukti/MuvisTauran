@@ -11,7 +11,7 @@ function EditDetail() {
     const navigate = useNavigate();
     const params = useParams();
     useEffect(() => {
-        fetch('http://localhost:3000/products/' + params.id)
+        fetch('http://localhost:3000/product/' + params.id)
             .then(response => response.json())
             .then(data => setData(data));
     }, []);
@@ -19,7 +19,7 @@ function EditDetail() {
 
     const updateHandler = (event) => {
         event.preventDefault();
-        fetch('http://localhost:3000/products/' + params.id, {
+        fetch('http://localhost:3000/product/' + params.id, {
             method: 'PUT',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(dataBefore)

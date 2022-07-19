@@ -17,16 +17,6 @@ function EditProduct() {
     const navigate = useNavigate();
 
     useEffect(() => {
-        console.log('masuk pak eko');
-        // detailProduct(dataDetail);
-    }, []);
-
-    console.log(detailProductResult, '=================')
-        ;
-    console.log(updateProductResult);
-    console.log('masuk');
-
-    useEffect(() => {
         if (detailProductResult) {
             setName(detailProductResult.name);
             setImgUrl(detailProductResult.imgUrl);
@@ -38,17 +28,9 @@ function EditProduct() {
 
     const submitHandler = (event) => {
         event.preventDefault();
-        // alert("berfungsi");
         dispatch(updateProduct({ id: id, name: name, imgUrl: imgUrl, price: price, CategoryId: CategoryId }));
         navigate("/product");
     };
-
-    useEffect(() => {
-        if (updateProductResult) {
-            dispatch(getListProduct);
-        }
-    }, [updateProductResult, dispatch]);
-
 
     return (
         <div className='addProduct'>

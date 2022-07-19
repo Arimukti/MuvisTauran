@@ -11,24 +11,28 @@ function Login() {
     const dispatch = useDispatch();
     const { isLogin } = useSelector((state) => state.ProductReducer);
     const [login, setLogin] = useState({
-        username: "",
+        email: "",
         password: "",
     });
     const navigate = useNavigate();
 
     function loginHandler(event) {
         event.preventDefault();
-        dispatch(loginUser({ username: login.username, password: login.password }));
-        navigate('/');
+        dispatch(loginUser({ email: login.email, password: login.password }));
     }
 
+    useEffect(() => {
+        if (isLogin) {
+            navigate("/");
+        }
+    }, [isLogin, navigate]);
 
     return (
         <div className='formLogin'>
             <p id="log">Login with your account</p>
             <Form className="align-items-center">
                 <Form.Group className="mb-3" controlId="name">
-                    <Form.Control className="text-center" type="text" value={login.username} placeholder="Type your name" onChange={(e) => setLogin((state) => ({ ...state, username: e.target.value }))} />
+                    <Form.Control className="text-center" type="text" value={login.email} placeholder="Type your email" onChange={(e) => setLogin((state) => ({ ...state, email: e.target.value }))} />
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="password">
                     <Form.Control className="text-center" type="password" value={login.password} placeholder="************" onChange={(e) => setLogin((state) => ({ ...state, password: e.target.value }))} />

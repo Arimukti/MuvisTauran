@@ -10,7 +10,6 @@ import { deleteProduct, getListProduct, detailProduct, getProductById } from "..
 function DetailProduct() {
     const { getListProductResult, getListProductLoading, getListProductError, deleteProductResult, getProductByIdResult } = useSelector((state) => state.ProductReducer);
     const dispatch = useDispatch();
-    const [dataDetail, setDataDetail] = useState([]);
     const params = useParams();
     const navigate = useNavigate();
     useEffect(() => {
@@ -22,15 +21,15 @@ function DetailProduct() {
     }
 
 
-    useEffect(() => {
-        if (deleteProductResult) {
-            navigate('/product');
-        }
-    }, [deleteProductResult, navigate]);
 
     const editHandler = (id) => {
-        dispatch(detailProduct(dataDetail));
+        dispatch(detailProduct(getProductByIdResult));
         navigate('/edit/' + id);
+    };
+
+    const deleteHandler = (id) => {
+        dispatch(deleteProduct(id));
+        navigate('/product');
     };
 
     return (
@@ -44,7 +43,7 @@ function DetailProduct() {
                         {getProductByIdResult.price && formatCurrency(getProductByIdResult.price)}
                     </Card.Text>
                     <Button variant="primary" className="btn-edit" onClick={() => editHandler(getProductByIdResult.id)}>Edit</Button>
-                    <Button variant="danger" className="btn-delete" onClick={() => dispatch(deleteProduct(getProductByIdResult.id))}>Delete</Button>
+                    <Button variant="danger" className="btn-delete" onClick={() => deleteHandler(getProductByIdResult.id)}>Delete</Button>
                 </Card.Body>
             </Card>
         </div>

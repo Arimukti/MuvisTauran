@@ -1,5 +1,6 @@
 import axios from 'axios';
 
+
 export const LOGIN = "LOGIN";
 export const LOGOUT = "LOGOUT";
 
@@ -10,21 +11,51 @@ export const DELETE_PRODUCT = "DELETE_PRODUCT";
 export const DETAIL_PRODUCT = "DETAIL_PRODUCT";
 export const UPDATE_PRODUCT = "UPDATE_PRODUCT";
 
+
 export const loginUser = (data) => {
     console.log('masuk action login bos');
     console.log(data);
-
-    if (data.username !== '' && data.password === "12345") {
-        localStorage.setItem('token', 'xvzft');
-    }
 
     return (dispatch) => {
         dispatch({
             type: LOGIN,
             payload: {
-                data: localStorage.getItem('token')
+                loading: true,
+                data: false,
+                errorMessage: false
             }
         });
+
+        axios({
+            method: "POST",
+            url: "http://localhost:3000/login",
+            timeout: 120000,
+            data: data
+        })
+            .then((response) => {
+                console.log("3. Berhasil login");
+                localStorage.setItem('token', response.data.access_token);
+                dispatch({
+                    type: LOGIN,
+                    payload: {
+                        loading: false,
+                        data: localStorage.getItem('token'),
+                        errorMessage: false
+                    }
+                });
+            })
+            .catch((error) => {
+                console.log("3. Gagal login");
+                dispatch({
+                    type: LOGIN,
+                    payload: {
+                        loading: false,
+                        data: false,
+                        errorMessage: error.response.data.message
+                    }
+                });
+                console.log(error.response.data.message);
+            });
     };
 };
 
@@ -56,7 +87,7 @@ export const getListProduct = () => {
         //get API
         axios({
             method: "GET",
-            url: "http://localhost:3000/products",
+            url: "http://localhost:3000/product",
             timeout: 120000
         })
             .then((response) => {
@@ -66,7 +97,7 @@ export const getListProduct = () => {
                     type: GET_LIST_PRODUCT,
                     payload: {
                         loading: false,
-                        data: response.data,
+                        data: response.data.allProduct,
                         errorMessage: false
                     }
                 });
@@ -102,17 +133,17 @@ export const getProductById = (id) => {
         //get API
         axios({
             method: "GET",
-            url: "http://localhost:3000/products/" + id,
+            url: "http://localhost:3000/product/" + id,
             timeout: 120000
         })
             .then((response) => {
                 //berhasil get API
-                console.log("3. Berhasil get API: ", response.data);
+                console.log("3. Berhasil get API: ", response.data.data);
                 dispatch({
                     type: GET_PRODUCT_BY_ID,
                     payload: {
                         loading: false,
-                        data: response.data,
+                        data: response.data.data,
                         errorMessage: false
                     }
                 });
@@ -133,7 +164,8 @@ export const getProductById = (id) => {
 };
 
 export const addProduct = (data) => {
-    console.log("2. Masuk action");
+    console.log(data);
+    console.log("2. Masuk action bang");
     return (dispatch) => {
         //loading
         dispatch({
@@ -148,8 +180,9 @@ export const addProduct = (data) => {
         //get API
         axios({
             method: "POST",
-            url: "http://localhost:3000/products",
+            url: "http://localhost:3000/product",
             timeout: 120000,
+            headers: { access_token: localStorage.getItem('token') },
             data: data
         })
             .then((response) => {
@@ -166,7 +199,7 @@ export const addProduct = (data) => {
             })
             .catch((error) => {
                 //gagal get API
-                console.log("3. Gagal get API");
+                console.log("3. Gagal get API ", error);
                 dispatch({
                     type: ADD_PRODUCT,
                     payload: {
@@ -180,7 +213,7 @@ export const addProduct = (data) => {
 };
 
 export const deleteProduct = (id) => {
-    console.log("2. Masuk action delete bang");
+    console.log("2. Masuk action delete bang ", id);
     return (dispatch) => {
         //loading
         dispatch({
@@ -195,7 +228,8 @@ export const deleteProduct = (id) => {
         //get API
         axios({
             method: "DELETE",
-            url: "http://localhost:3000/products/" + id,
+            url: "http://localhost:3000/product/" + id,
+            headers: { access_token: localStorage.getItem('token') },
             timeout: 120000,
         })
             .then((response) => {
@@ -213,7 +247,7 @@ export const deleteProduct = (id) => {
             .catch((error) => {
                 //gagal get API
                 console.log(error);
-                console.log("3. Gagal get API delete bang");
+                console.log("3. Gagal get API delete bang ", error);
                 dispatch({
                     type: DELETE_PRODUCT,
                     payload: {
@@ -239,7 +273,8 @@ export const detailProduct = (data) => {
 };
 
 export const updateProduct = (data) => {
-    console.log("2. Masuk action");
+    console.log(data, 'ini data untuk update');
+    console.log("2. Masuk action update");
     return (dispatch) => {
         //loading
         dispatch({
@@ -254,8 +289,9 @@ export const updateProduct = (data) => {
         //get API
         axios({
             method: "PUT",
-            url: "http://localhost:3000/products/" + data.id,
+            url: "http://localhost:3000/product/" + data.id,
             timeout: 120000,
+            headers: { access_token: localStorage.getItem('token') },
             data: data
         })
             .then((response) => {
@@ -272,7 +308,7 @@ export const updateProduct = (data) => {
             })
             .catch((error) => {
                 //gagal get API
-                console.log("3. Gagal get API");
+                console.log("3. Gagal get API ", error);
                 dispatch({
                     type: UPDATE_PRODUCT,
                     payload: {
