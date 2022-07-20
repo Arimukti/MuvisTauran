@@ -1,0 +1,29 @@
+.titlePage{
+    color: white;
+    font-size: 40px;
+}
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 80%;
+}
+.left-text{
+    color: white;
+    font-size: 32px;
+}
+.right-text{
+    color: white;
+    font-size: 32px;
+}
+.left-text>img{
+    width: 300px;
+    height: 300px;
+    padding: 30px;
+}
+.contact-us{
+    position: absolute;
+    color:greenyellow;
+    bottom: 12px;
+    right: 12px;
+}

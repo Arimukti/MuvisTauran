@@ -9,6 +9,7 @@ import EditProduct from './components/EditProduct/EditProduct';
 import { ListProduct } from './components';
 import Landing from './components/Landing/Landing';
 import Protected from './components/Protected/Protected';
+import AboutUs from './components/aboutUs/AboutUs';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
             <AddProduct />
           </Protected>} />
         <Route path='/edit/:id' element={<EditProduct />} />
+        <Route path='/about' element={<AboutUs />} />
       </Routes>
     </div>
   );

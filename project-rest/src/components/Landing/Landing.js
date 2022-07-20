@@ -12,6 +12,10 @@ function Landing() {
     const goToMenu = () => {
         navigate("/product");
     };
+
+    const gotoAbout = () => {
+        navigate('/about');
+    };
     return (
         <div class="container">
             <div className='up'>
@@ -27,7 +31,7 @@ function Landing() {
             </div>
             <div className='btn-landing'>
                 <button className='btn-left' onClick={goToMenu} >Let's Go</button>
-                <button className='btn-about'>About Us</button>
+                <button className='btn-about' onClick={gotoAbout}>About Us</button>
             </div>
             <div className='img-add'>
                 <img src={lemon} />
