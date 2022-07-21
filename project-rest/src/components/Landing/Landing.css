@@ -3,13 +3,21 @@ body{
     background-size: cover;
     /* background-repeat: no-repeat; */
 }
+.container{
+    display: grid;
+    height: 400px;
+    /* grid-template-rows: 1fr 1fr 1fr; */
+}
 .up{
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
 }
 .img-ayam img{
-    width: 600px;
+    /* width: 600px; */
+    width: 80%;
     margin-left: 20px;
     height: 500px;
+    height: 80%;
 }
 p1{
     font-size: 20px;
@@ -20,7 +28,7 @@ h1{
 }
 .btn-landing{
     position: absolute;
-    left:250px;
+    left:210px;
     top:300px;
     padding: 20px;
 }
@@ -29,6 +37,14 @@ h1{
     background-color: #FAD9A1;
     border-radius: 10px;
     color:blue
+}
+.btn-left:hover{
+    background-color: greenyellow;
+    color: black;
+}
+.btn-about:hover{
+    background-color: greenyellow;
+    color: black;
 }
 .btn-about{
     margin-right: 20px;
@@ -40,4 +56,45 @@ h1{
     position: absolute;
     bottom: 5px;
     margin-left: 100px;
+}
+.service{
+    width: 80%;
+    justify-content: center;
+    margin: auto;
+    margin-bottom: 10px;
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    padding: 10px;
+    gap: 10px;
+    text-align: center;
+}
+.tab-service{
+    backdrop-filter: blur(10px);
+    justify-content: center;
+    background-color: rgb(34, 37, 37);
+}
+.self-service{
+    backdrop-filter: blur(10px);  
+    background-color: rgb(34, 37, 37);
+}
+.take-away{
+    backdrop-filter: blur(10px);  
+    background-color: rgb(34, 37, 37);
+}
+.delivery-order{
+    backdrop-filter: blur(10px);  
+    background-color: rgb(34, 37, 37);
+}
+.service p1{
+    font-family: 'Gentium Book Plus', serif;
+    color: #F37878;
+}
+.service p{
+    font-size: 13px;
+}
+.service img{
+    justify-items: center;
+    margin: auto;
+    width: 40px;
+    height: 40px;
 }

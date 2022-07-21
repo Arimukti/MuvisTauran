@@ -10,11 +10,13 @@ import { ListProduct } from './components';
 import Landing from './components/Landing/Landing';
 import Protected from './components/Protected/Protected';
 import AboutUs from './components/aboutUs/AboutUs';
+import Navbar from './components/Navbar/Navbar';
 
 function App() {
   return (
     <div className="App">
-      <NavbarList />
+      {/* <NavbarList /> */}
+      <Navbar />
       <Routes>
         <Route path='/' element={<Landing />} />
         <Route path='/login' element={<Login />} />

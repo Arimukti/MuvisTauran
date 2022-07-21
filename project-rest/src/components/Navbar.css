@@ -1,4 +1,4 @@
-.me-auto{
+/* .me-auto{
     margin-right:50px;
     height: 20px;
     align-items: center;
@@ -21,6 +21,6 @@
 }
 .sticky-top{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 
-}
+} */

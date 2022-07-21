@@ -1,0 +1,37 @@
+.navbar{
+        width: 80%;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        align-items: center;
+        margin: auto;
+        /* position:fixed;
+        top: 0; */
+    }
+.brand img{
+        height: 30px;
+        width: 40px;
+    }
+.brand img:hover{
+        width: 50px;
+    }
+.menu-list ul{
+        display: grid;
+        list-style: none;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        align-items: center;
+        gap: 5px;
+    }
+.menu-list a{
+    display: block;
+    background-color:black;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    padding: 5px;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+a:hover{
+        color:black;
+        background-color: darkkhaki
+    }
