@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 import "./Login.css";
 import { useDispatch, useSelector } from 'react-redux';
-import { loginUser } from '../store/actions/productAction';
+import { loginUser } from '../../store/actions/productAction';
 
 
 function Login() {

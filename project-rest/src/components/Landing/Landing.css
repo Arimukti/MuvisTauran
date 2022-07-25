@@ -6,14 +6,12 @@ body{
 .container{
     display: grid;
     height: 400px;
-    /* grid-template-rows: 1fr 1fr 1fr; */
 }
 .up{
     display: grid;
     grid-template-columns: 1fr 2fr;
 }
 .img-ayam img{
-    /* width: 600px; */
     width: 80%;
     margin-left: 20px;
     height: 500px;
@@ -70,20 +68,23 @@ h1{
 }
 .tab-service{
     backdrop-filter: blur(10px);
-    justify-content: center;
     background-color: rgb(34, 37, 37);
+    padding: 5px;
 }
 .self-service{
     backdrop-filter: blur(10px);  
     background-color: rgb(34, 37, 37);
+    padding: 5px;
 }
 .take-away{
     backdrop-filter: blur(10px);  
     background-color: rgb(34, 37, 37);
+    padding: 5px;
 }
 .delivery-order{
     backdrop-filter: blur(10px);  
     background-color: rgb(34, 37, 37);
+    padding: 5px;
 }
 .service p1{
     font-family: 'Gentium Book Plus', serif;

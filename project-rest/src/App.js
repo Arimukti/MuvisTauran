@@ -1,21 +1,18 @@
 import './App.css';
-import Login from './pages/Login';
+import Login from './components/Login/Login';
 import { Route, Routes } from 'react-router-dom';
-import Home from './pages/Home';
 import AddProduct from './components/AddProduct/AddProduct';
-import NavbarList from './components/Navbar';
 import DetailProduct from './components/Detail/DetailProduct';
 import EditProduct from './components/EditProduct/EditProduct';
 import { ListProduct } from './components';
 import Landing from './components/Landing/Landing';
 import Protected from './components/Protected/Protected';
-import AboutUs from './components/aboutUs/AboutUs';
+import AboutUs from './components/AboutUs/AboutUs';
 import Navbar from './components/Navbar/Navbar';
 
 function App() {
   return (
     <div className="App">
-      {/* <NavbarList /> */}
       <Navbar />
       <Routes>
         <Route path='/' element={<Landing />} />
