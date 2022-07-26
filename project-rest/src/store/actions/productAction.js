@@ -28,7 +28,7 @@ export const loginUser = (data) => {
 
         axios({
             method: "POST",
-            url: "http://localhost:3000/login",
+            url: "https://muvis-taurant.herokuapp.com/login",
             timeout: 120000,
             data: data
         })
@@ -87,7 +87,7 @@ export const getListProduct = () => {
         //get API
         axios({
             method: "GET",
-            url: "http://localhost:3000/product",
+            url: "https://muvis-taurant.herokuapp.com/product",
             timeout: 120000
         })
             .then((response) => {
@@ -133,7 +133,7 @@ export const getProductById = (id) => {
         //get API
         axios({
             method: "GET",
-            url: "http://localhost:3000/product/" + id,
+            url: "https://muvis-taurant.herokuapp.com/product/" + id,
             timeout: 120000
         })
             .then((response) => {
@@ -180,7 +180,7 @@ export const addProduct = (data) => {
         //get API
         axios({
             method: "POST",
-            url: "http://localhost:3000/product",
+            url: "https://muvis-taurant.herokuapp.com/product",
             timeout: 120000,
             headers: { access_token: localStorage.getItem('token') },
             data: data
@@ -228,7 +228,7 @@ export const deleteProduct = (id) => {
         //get API
         axios({
             method: "DELETE",
-            url: "http://localhost:3000/product/" + id,
+            url: "https://muvis-taurant.herokuapp.com/product/" + id,
             headers: { access_token: localStorage.getItem('token') },
             timeout: 120000,
         })
@@ -289,7 +289,7 @@ export const updateProduct = (data) => {
         //get API
         axios({
             method: "PUT",
-            url: "http://localhost:3000/product/" + data.id,
+            url: "https://muvis-taurant.herokuapp.com/product/" + data.id,
             timeout: 120000,
             headers: { access_token: localStorage.getItem('token') },
             data: data

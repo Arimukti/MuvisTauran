@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/static/css/main.a0a6266b.css",
+    "main.js": "/static/js/main.85636b08.js",
+    "static/js/787.0900101f.chunk.js": "/static/js/787.0900101f.chunk.js",
+    "static/media/ayam-atas.png": "/static/media/ayam-atas.bcfda7a904c074751b67.png",
+    "static/media/stroberi.png": "/static/media/stroberi.e460051748291d9bc585.png",
+    "static/media/orange.png": "/static/media/orange.542a5ad23861193187b5.png",
+    "static/media/lemon.png": "/static/media/lemon.51dbb9523fc65271c7d9.png",
+    "static/media/milkshake.png": "/static/media/milkshake.cc6cc6f418c6312e8bf7.png",
+    "static/media/bckgrnd.jpg": "/static/media/bckgrnd.08b0558d15588e3cb790.jpg",
+    "static/media/deli.png": "/static/media/deli.03c36f0845cce0dcbedb.png",
+    "index.html": "/index.html",
+    "main.a0a6266b.css.map": "/static/css/main.a0a6266b.css.map",
+    "main.85636b08.js.map": "/static/js/main.85636b08.js.map",
+    "787.0900101f.chunk.js.map": "/static/js/787.0900101f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a0a6266b.css",
+    "static/js/main.85636b08.js"
+  ]
+}

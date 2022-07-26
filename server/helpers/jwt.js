@@ -1,5 +1,5 @@
 const jwt = require('jsonwebtoken');
-const key = 'INIRAHASIAPROG';
+const key = process.env.KEYWORD;
 
 const payloadToToken = (sentPayload) => {
     return jwt.sign(sentPayload, key);
